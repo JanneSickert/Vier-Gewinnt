@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import info.Do;
 /**
  * Öffnet das Fenster das die bisherigen Spiele anzeigt
@@ -27,10 +26,6 @@ public class OpenStatistik {
 
 	@Do(aufgabe = "Überträgt die Importiereten Daten auf das Panel der Page Class & "
 			+ "Fügt Buttons zum wechseln der Seiten hinzu.")
-	/**
-	 * Überträgt die Importiereten Daten auf das Panel der Page Class Fügt Buttons
-	 * zum wechseln der Seiten hinzu.
-	 */
 	public void build() {
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

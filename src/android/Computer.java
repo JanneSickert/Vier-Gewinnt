@@ -91,11 +91,7 @@ public class Computer {
 		}
 	}
 
-	/**
-	 * <b>Entscheidet per Zufall ob Rot oder Blau beginnt</b>
-	 * 
-	 * @return 0 oder 1
-	 */
+	@Do(aufgabe = "Entscheidet per Zufall ob Rot oder Blau beginnt", back = "0 oder 1")
 	private int getZeroOrOne() {
 		int nr = (int) Math.round(Math.random());
 		return nr;
@@ -103,8 +99,6 @@ public class Computer {
 
 	@Do(aufgabe = "Beschreibt den Timer und gibt die Zeit aus bis der andere spielen kann.")
 	private void initTimer() {
-		// Beschreibt den Timer und gibt die Zeit aus bis der andere spielen
-		// kann.
 		timer = new Timer(1000, new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				currentTime--;
@@ -148,7 +142,6 @@ public class Computer {
 
 		@Do(aufgabe = "Öffnet die Konsole")
 		public void open() {
-			// Öffnet die Konsole
 			frame.setLocationRelativeTo(null);
 			frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			frame.setResizable(false);
@@ -175,7 +168,6 @@ public class Computer {
 
 	@Do(aufgabe = "erstellt die Felder im Spielfeld")
 	private void createChips() {
-		// erstellt die Felder im Spielfeld
 		list = new ArrayList<Chip>();
 		for (int i = 0; i < FIELDS * FIELDS; i++) {
 			Chip chip = new Chip();
@@ -186,7 +178,6 @@ public class Computer {
 
 	@Do(aufgabe = "Setzt die Felder auf das Panel")
 	private void build() {
-		// Setzt die Felder auf das Panel
 		for (int inn = 0; inn < FIELDS * FIELDS; inn++) {
 			panel.add(list.get(inn));
 		}
@@ -198,7 +189,6 @@ public class Computer {
 
 	@Do(aufgabe = "Definiert das JFrame")
 	private void windows() {
-		// Definiert das JFrame
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
@@ -209,9 +199,7 @@ public class Computer {
 	}
 
 	@Do(aufgabe = "Schreibt in die Konsole", parameter = { "Der Text der in die Konsole geschrieben werden soll." })
-	private void schreiber(String neuerText) { // Parameter = Der Text der in die Konsole
-		// geschrieben werden soll.
-		// Schreibt in die Konsole
+	private void schreiber(String neuerText) {
 		if (zeilen > FIELDS + 2) {
 			c.con.setText("");
 			zeilen = 0;
@@ -225,7 +213,6 @@ public class Computer {
 	@Do(aufgabe = "Setzt einen Stein in die im Parameter übergebene Spalte 0 ist ganz links.", parameter = {
 			"Die Spalte in der, der Stein gesetzt werden soll." })
 	private void zug(int x) {
-		// Parameter = Die Spalte in der, der Stein gesetzt werden soll
 		if (zuege % 2 == 0) {
 			for (int i = FIELDS - 1; i >= 0; i--) {
 				int point = (FIELDS * i) + x;
@@ -259,7 +246,6 @@ public class Computer {
 		@Override
 		@Do(aufgabe = "Erfasst welcher Button gedrückt wurde.")
 		public void actionPerformed(ActionEvent arg) {
-			// Erfasst welcher Button gedrückt wurde.
 			if (arg.getSource() == list.get(0) || arg.getSource() == list.get(FIELDS)
 					|| arg.getSource() == list.get(FIELDS * 2) || arg.getSource() == list.get(FIELDS * 3)
 					|| arg.getSource() == list.get(FIELDS * 4) || arg.getSource() == list.get(FIELDS * 5)
@@ -384,8 +370,6 @@ public class Computer {
 
 	@Do(aufgabe = "Überprüft ob jemand gewonnen hat." + " Dabei werden alle möglichen gewinnstellungen überprüft.")
 	private void testWinner() {
-		// Überprüft ob jemand gewonnen hat. Dabei werden alle möglichen
-		// gewinnstellungen überprüft.
 		if (test(Typs.ROT)) {
 			// Spieler1 hat gewonnen
 			timer.stop();
@@ -474,7 +458,6 @@ public class Computer {
 
 	@Do(aufgabe = "Testet ob die Spalte voll ist.")
 	private void testZugMoeglich() {
-		// Testet ob die Spalte voll ist.
 		for (int i = 0; i < FIELDS; i++) {
 			if (arr[i]) {
 				boolean[] control = new boolean[FIELDS];
@@ -492,9 +475,9 @@ public class Computer {
 		}
 	}
 
+	@Do(aufgabe = "Wenn alle Felder voll sind ist das Spiel Unentschieden.")
 	private void testUnentschieden() {
 		if (zuege == (FIELDS * FIELDS)) {
-			// Wenn alle Felder voll sind ist das Spiel Unentschieden.
 			timer.stop();
 			schreiber("Unentschieden!");
 			log.countGame();

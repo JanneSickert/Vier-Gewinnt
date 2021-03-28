@@ -22,14 +22,12 @@ public class Nameneingabe {
 	private JPanel panel = new JPanel();
 	private JLabel[] spieler = new JLabel[2];
 	private JTextField[] tf = new JTextField[2];
-	private JButton enter = new JButton("Namen & AGB'S Betätigen");
+	private JButton enter = new JButton("Namen Betätigen");
 	private final int X = 200;
 	private final int Y = 50;
 
 	@Do(aufgabe = "Beschreibt das Eingabefeld für Namen und den Button zum Starten der Partie")
 	public void def() {
-		// Beschreibt das Eingabefeld für Namen und den Button zum Starten der
-		// Partie
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);

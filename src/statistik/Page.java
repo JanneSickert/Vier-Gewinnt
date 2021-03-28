@@ -11,6 +11,7 @@ import javax.swing.JPanel;
  * @author Janne
  *
  */
+@SuppressWarnings("serial")
 public class Page extends JPanel {
 
 	private JLabel[] head = new JLabel[4];

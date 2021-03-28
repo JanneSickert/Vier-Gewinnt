@@ -30,8 +30,6 @@ public class Namenseingabe {
 
 	@Do(aufgabe = "Beschreibt das Eingabefeld für Namen und den Button zum Starten der Partie")
 	public void def() {
-		// Beschreibt das Eingabefeld für Namen und den Button zum Starten der
-		// Partie
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);

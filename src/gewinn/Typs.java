@@ -1,6 +1,10 @@
 package gewinn;
 
+/**
+ * Zustände die ein Feld haben kann
+ * @author Janne
+ *
+ */
 public enum Typs {
-	// Zustände die ein Feld haben kann
 	ROT, BLAU, LEHR
 }

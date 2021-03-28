@@ -24,15 +24,6 @@ public class Logistic {
 	@Do(aufgabe = "erstellt eine Neue Datei in der das Spielergebnis gespeichert wird."
 			+ " als 4 Eintrag wird die Aktuelle Zeit und das Datum gespeichert.", parameter = { "Name von Spieler 1",
 					"Name von Spieler 2", "Spielergebnis:" + " Spieler 1 oder Spieler 2 oder Unentschieden" })
-	/**
-	 * <b>erstellt eine Neue Datei in der das Spielergebnis gespeichert wird.</b>
-	 * 
-	 * @param Name
-	 *            spieler 1
-	 * @param Name
-	 *            spieler 2
-	 * @param Spielergebnis
-	 */
 	public void export(String name1, String name2, String ergebnis) {
 		String dataName = "history/game_" + getNr() + ".txt";
 		File f = new File(dataName);
@@ -60,9 +51,6 @@ public class Logistic {
 	}
 
 	@Do(aufgabe = "Zählt die Nummer der Spiele in der 'nr' datei um eins nach oben.")
-	/**
-	 * Zählt die Nummer der Spiele in der 'nr' datei um eins nach oben.
-	 */
 	public void countGame() {
 		int nr = getNr() + 1;
 		File ff = new File(pathNr);
@@ -117,12 +105,6 @@ public class Logistic {
 
 	@Do(aufgabe = "Liefert die Werte für die statistik", back = "{name1, name2, ergebnis des Spiels}"
 			+ " von diesen Objekten werden soviele zurückgegeben wie Spiele gespielt wurden.")
-	/**
-	 * Liefert die Werte für die statistik
-	 * 
-	 * @return von diesen Objekten werden soviele zurückgegeben wie Spiele gespielt
-	 *         wurden.
-	 */
 	public String[][] inport() {
 		int nog = getNr(); // nog = number Of Games
 		if (nog > 0) {

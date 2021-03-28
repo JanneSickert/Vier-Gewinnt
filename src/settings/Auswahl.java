@@ -58,7 +58,6 @@ public class Auswahl {
 	}
 
 	private class Opt implements ActionListener {
-		@SuppressWarnings("static-access")
 		@Override
 		// Aktionen zur Auswahl des Spielmoduses
 		public void actionPerformed(ActionEvent nrOfBu) {
