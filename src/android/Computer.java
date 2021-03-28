@@ -21,6 +21,20 @@ import statistik.Logistic;
  * Spielfeld ArrayList zurückgeben lassen. der Computer hat Rot wenn zuege=0 ist
  * beginnt er.
  * 
+ * <b>Strategie des Computerspielers</b>
+ * 
+ * 1.) Die meisten möglichkeiten hat man in der Mitte
+ *     deswegen versucht der Computer als erstes die Spalte in der Mitte
+ *     voll zu bekommen insofern ein gewinn noch möglich ist.
+ *   
+ *   
+ * 2.) Wenn der Gegnere drei Steine in einer Rheie,
+ *   Spalte oder Zeile hat versucht der Computer dies zu verhindern.
+ *   Dabei schaut sich der Computer alle möglichen drei Steine
+ *   kombinatsionen an.
+ *   
+ * 3.) Nicht die Zelle füllen unter einen Chip der das Spiel beeendet.
+ * 
  * @author Janne
  * @author Dario
  */
